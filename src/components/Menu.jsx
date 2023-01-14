@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 import './Menu.scss';
 
-const menuData = ['Home', 'About us', 'Services', 'Portfolio', 'Contacts']
+const menuData = ['Home', 'About', 'Services', 'Portfolio', 'Contacts']
 
 export default function Menu() {
     const [activeIndex, setActiveIndex] = useState(0);
@@ -10,24 +10,26 @@ export default function Menu() {
     return (
         <>
             <header>
-                <div className='container'>
+                <div className='menuContainer'>
                     <div className='header'>
                         <div className='menu-logo'>
                             <img src="../images/logo-coffee.jpg" alt="" />
                         </div>
 
-                        <div className='menu'>
-                            {
-                                menuData.map((item, index) => (
-                                    <MenuItem 
-                                    key={item}
-                                    item={item}
-                                    isSelected={activeIndex ===  index}
-                                    handleClick={() => setActiveIndex(index)}
-                                    />
-                                ))
-                            }
-                        </div>
+                        <AnimateSharedLayout>
+                            <div className='menu'>
+                                {
+                                    menuData.map((item, index) => (
+                                        <MenuItem
+                                            key={item}
+                                            item={item}
+                                            isSelected={activeIndex === index}
+                                            handleClick={() => setActiveIndex(index)}
+                                        />
+                                    ))
+                                }
+                            </div>
+                        </AnimateSharedLayout>
                     </div>
                 </div>
             </header>
@@ -36,16 +38,29 @@ export default function Menu() {
     );
 }
 
-function MenuItem (props) {
+function MenuItem(props) {
     const {
         item,
         isSelected,
         handleClick = Function.prototype
     } = props;
 
-    return(
-        <motion.div className='menuItem' onClick={handleClick} initial={{color: '#000'}} animate={{ color: isSelected ? 'rgb(255, 0, 0)' : '#000' }}>
+    return (
+        <motion.div className='menuItem' onClick={handleClick} initial={{ color: '#000' }} animate={{ color: isSelected ? 'rgb(255, 0, 0)' : '#000' }}>
+            {
+                isSelected && <ActiveLine />
+            }
             <span>{item}</span>
         </motion.div>
     );
+}
+
+function ActiveLine() {
+    return (
+        <motion.div
+            className='activeItem'
+            layoutId="activeItem"
+        />
+    );
+
 }

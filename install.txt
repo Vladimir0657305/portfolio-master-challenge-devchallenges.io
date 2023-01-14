@@ -1,0 +1,7 @@
+npm i react-router-dom
+npm i sass
+npm i swiper
+========
+https://www.npmjs.com/package/react-typing-effect
+npm install --save react-typing-effect
+=========
