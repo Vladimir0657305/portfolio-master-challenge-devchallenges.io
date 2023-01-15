@@ -4,6 +4,10 @@
 .features {
     margin-top: 100px;
     height: 90vh;
+    // font-family: "Noto Sans", sans-serif;
+    // font-family: "Poppins", sans-serif;
+    font-family: "Playfair Display", sans-serif;
+
     & h1 {
         margin: 100px 0;
     }
@@ -11,6 +15,26 @@
 .features-section {
     display: flex;
     justify-content: center;
+    background-color: #eee;
+}
+.features-text {
+    display: flex;
+    font-family: "Open Sans", sans-serif;
+
+    & span {
+        // flex: 1 1 40%;
+        // margin: -40px 40px 40px 40px;
+        padding: 10px;
+        border: 2px solid red;
+        border-radius: 20px;
+        &:first-child {
+            margin: -40px 20px 40px 40px;
+        }
+        &:last-child {
+            margin: -40px 40px 40px 20px;
+        }
+    }
+    
 }
 .features-block {
     width: 100%;
