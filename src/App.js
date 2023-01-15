@@ -1,4 +1,5 @@
 import './App.css';
+import Features from './components/Features';
 import Footer from './components/Footer';
 // import Main from './components/Main';
 import Menu from './components/Menu';
@@ -16,7 +17,7 @@ function App() {
           <div className='siteHead'>
             <SiteHead />
           </div>
-
+          <Features />
 
           <Footer />
         </div>
