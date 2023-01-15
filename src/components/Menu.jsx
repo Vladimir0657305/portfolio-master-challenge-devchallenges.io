@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import './Menu.scss';
 
-const menuData = ['Home', 'About', 'Services', 'Portfolio', 'Contacts']
+const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
 
 export default function Menu() {
     const [activeIndex, setActiveIndex] = useState(0);

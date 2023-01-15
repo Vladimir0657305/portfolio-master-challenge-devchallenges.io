@@ -6,10 +6,11 @@
     height: 90vh;
     // font-family: "Noto Sans", sans-serif;
     // font-family: "Poppins", sans-serif;
-    font-family: "Playfair Display", sans-serif;
+    
 
     & h1 {
         margin: 100px 0;
+        font-family: "Playfair Display", sans-serif;
     }
 }
 .features-section {
@@ -19,11 +20,11 @@
 }
 .features-text {
     display: flex;
-    font-family: "Open Sans", sans-serif;
+    // font-family: "Open Sans", sans-serif;
 
     & span {
-        // flex: 1 1 40%;
-        // margin: -40px 40px 40px 40px;
+        text-indent: 1.5em;
+        text-align: left;
         padding: 10px;
         border: 2px solid red;
         border-radius: 20px;
