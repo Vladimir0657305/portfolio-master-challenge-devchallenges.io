@@ -69,7 +69,7 @@ export default function Features() {
                                 scale={1.02}
                             >
                                 <div className="inner-element">
-                                    <div>Cybersecurity</div>
+                                    <div>Cyber Security</div>
                                 </div>
                             </Tilt>
                         </div>
