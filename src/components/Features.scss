@@ -1,16 +1,37 @@
-@import '../ReactParallaxTilt.scss';
+// @import '../ReactParallaxTilt.scss';
+
+
+.features {
+    margin-top: 100px;
+    height: 90vh;
+    & h1 {
+        margin: 100px 0;
+    }
+}
+.features-section {
+    display: flex;
+    justify-content: center;
+}
+.features-block {
+    width: 100%;
+    max-width: 1440px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.features-block__items {}
 
 .parallax-effect-glare-scale {
-    @include background;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 300px;
-    background-color: darkgreen;
+    height: 400px;
     color: white;
     border: 5px solid black;
+    border: 5px solid red;
     border-radius: 20px;
 
     transform-style: preserve-3d;
@@ -25,4 +46,24 @@
         color: white;
         transform: translateZ(60px);
     }
+}
+.features-end {
+    // margin-top: 400px;
+}
+.item1 {
+    background-image: url('../images/blockchain.jpg') ;
+    background-position: center;
+}
+.item2 {
+    background-image: url('../images/front-end.jpg') ;
+    background-position: center;
+}
+.item3 {
+    background-image: url('../images/back-end.jpg') ;
+    background-position: center;
+}
+.item4 {
+    background-image: url('../images/cybersecurity.jpg') ;
+    background-position: center;
+    margin-bottom: 100px;
 }
