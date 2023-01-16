@@ -1,0 +1,39 @@
+.portfolio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.portfolio-block {
+    width: 100%;
+    max-width: 1440px;
+    height: 800px;
+    margin-top: 180px;
+    position: relative;
+}
+.portfolio-block__item {
+    display: inline-block;
+    width: 300px;
+    height: 260px;
+    border-radius: 20px;
+    background-color: rgb(173, 125, 125);
+    position: absolute;
+    svg{
+        width: 40px;
+        height: 40px;
+    }
+    &.block1 {
+        top: 20%;
+        left: 12%;
+
+    }
+    &.block2 {
+        top: 30%;
+        left: 37%;
+    }
+    &.block3 {
+        top: 40%;
+        left: 62%;
+    }
+}
