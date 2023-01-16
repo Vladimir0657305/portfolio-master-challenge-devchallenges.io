@@ -5,3 +5,9 @@ npm i swiper
 https://www.npmjs.com/package/react-typing-effect
 npm install --save react-typing-effect
 =========
+https://openbase.com/js/react-parallax
+https://www.npmjs.com/package/react-parallax
+
+npm i react-parallax
+
+==========

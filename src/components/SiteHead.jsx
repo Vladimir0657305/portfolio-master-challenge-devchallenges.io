@@ -1,21 +1,20 @@
 
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// import { EffectFade, Autoplay } from 'swiper';
 import 'swiper/css';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
 import ReactTypingEffect from 'react-typing-effect';
-
-
 import './SiteHead.scss';
 import { useState } from 'react';
 
 export default function SiteHead() {
     SwiperCore.use([Autoplay]);
     const [show, setShow] = useState(1);
+
+    const color =() => Math.floor(Math.random() * 250);
 
     return (
         <>
@@ -41,7 +40,6 @@ export default function SiteHead() {
 
                 onSlideChange={(swiperCore) => {
                     const { activeIndex } = swiperCore;
-                    console.log(activeIndex)
                     switch (activeIndex) {
                         case (1): {
                             setShow(1);
@@ -91,7 +89,8 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        style={i % 2 === 0 ? { color: '#f5bb00' } : { color: '#50627B' }}
+                                                        // style={i % 2 === 0 ? { color: '#f5bb00' } : { color: '#50627B' }}
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}`} }
                                                     >{char}</span>
                                                 );
                                             })}
@@ -111,7 +110,6 @@ export default function SiteHead() {
                         <div className='typingEffect slide2'>
                             <ReactTypingEffect
                                 text={["I like coffe."]}
-                                // cursorRenderer={cursor => <h2>{cursor}</h2>}
                                 cursorRenderer={false}
                                 speed={70}
                                 eraseSpeed={70}
@@ -125,7 +123,8 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        style={i % 2 === 0 ? { color: '#442b15' } : { color: '#8ea604' }}
+                                                        // style={i % 2 === 0 ? { color: '#442b15' } : { color: '#8ea604' }}
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
                                             })}
@@ -157,7 +156,8 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        style={i % 2 === 0 ? { color: '#fff' } : { color: '#dab7a3' }}
+                                                        // style={i % 2 === 0 ? { color: '#fff' } : { color: '#dab7a3' }}
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
                                             })}
@@ -189,7 +189,8 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        style={i % 2 === 0 ? { color: '#c7b6b0' } : { color: '#f3fafa' }}
+                                                        // style={i % 2 === 0 ? { color: '#c7b6b0' } : { color: '#f3fafa' }}
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
                                             })}
@@ -221,7 +222,8 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        style={i % 2 === 0 ? { color: '#a1fcdf' } : { color: '#fcd29f' }}
+                                                        // style={i % 2 === 0 ? { color: '#a1fcdf' } : { color: '#fcd29f' }}
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
                                             })}

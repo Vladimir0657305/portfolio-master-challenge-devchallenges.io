@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Parallax, Background } from 'react-parallax';
 import {
     Accordion,
     AccordionItem,
@@ -19,6 +19,12 @@ export default function Services() {
     return (
         <>
             <section className='services'>
+                <Parallax bgImage={'../images/bg1.jpg'} strength={500}>
+                    <div style={{ height: 50 }}>
+                        {/* <div style={insideStyles}>HTML inside the parallax</div> */}
+                    </div>
+                
+                
                 
                 <div className='services-block'>
                     <h1>What are IT services?</h1>
@@ -149,7 +155,7 @@ export default function Services() {
                     </div>
 
                 </div>
-
+                </Parallax>
             </section>
 
         </>

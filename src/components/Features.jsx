@@ -10,6 +10,7 @@ export default function Features() {
     return (
         <>
             <section className='features'>
+                
                 <h1>Information Technology</h1>
                 <div className='features-text'>
                     <span>21st century has come to be known as the era of Information Technology; it is the key driver of economic growth of not only a nation, but rather the whole world. The growth and progress of every sector of the country today depends on the level of Information Technology.</span>
@@ -81,6 +82,7 @@ export default function Features() {
                 </div>
 
                 {/* <p className='features-end'>.</p> */}
+                
             </section>
         </>
     );
