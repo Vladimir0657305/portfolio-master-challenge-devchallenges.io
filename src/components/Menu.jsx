@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
+import { Link, animateScroll as scroll } from "react-scroll";
 import './Menu.scss';
 
 const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
