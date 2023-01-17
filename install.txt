@@ -12,6 +12,7 @@ npm i react-parallax
 
 ==========
 https://www.npmjs.com/package/react-scroll
+https://github.com/ganderzz/react-scroll-to
 https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react-ru
 npm i -S react-scroll
 
