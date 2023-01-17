@@ -6,6 +6,8 @@ import Menu from './components/Menu';
 import Portfolio from './components/Portfolio';
 import Services from './components/Services';
 import SiteHead from './components/SiteHead';
+import Scroll from 'react-scroll';
+var Element = Scroll.Element;
 
 function App() {
   return (
@@ -13,17 +15,29 @@ function App() {
       <main className='container'>
         <div className="App">
           <div className='menu'>
-            <Menu />
-            {/* <Main /> */}
+            <Menu  />
           </div>
-          <div className='siteHead'>
-            <SiteHead />
-          </div>
-          <Features />
-          <Services />
-          <Portfolio />
+          <Element name="section0" >
+            <SiteHead  />
+          </Element>
+          
+          <Element name="section1" >
+            <Features  />
+          </Element>
 
-          <Footer />
+          <Element name="section2" >
+            <Services />
+          </Element>
+          
+          <Element name="section3" >
+            <Portfolio />
+          </Element>
+          
+          <Element name="section4" >
+            <Footer  />
+          </Element>
+          
+
         </div>
       </main>
     </>

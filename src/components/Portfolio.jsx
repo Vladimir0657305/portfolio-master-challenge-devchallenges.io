@@ -46,7 +46,8 @@ export default function Portfolio() {
                         whileInView="visible"
                         viewport={{ amount: 0.1 }}
                         className='portfolio-block'>
-                        <motion.h1 transition={{ type: "inertia", velocity: 50 }} custom={1} variants={portfolioTextAnimation} >Portfolio block</motion.h1>
+                        <motion.h1 custom={1} variants={portfolioTextAnimation} >Portfolio block</motion.h1>
+                        {/* transition={{ type: "inertia", velocity: 50 }} */}
                         <motion.p custom={4} variants={portfolioTextAnimation}> Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, nisi?</motion.p>
                         <motion.div
                             initial="hidden"

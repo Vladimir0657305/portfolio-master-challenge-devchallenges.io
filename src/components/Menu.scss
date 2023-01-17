@@ -31,6 +31,9 @@
 .menu {
     display: flex;
     align-items: center;
+    & a.activeLink {
+        background-color: blue;
+    }
 }
 .menuItem {
     width: auto;
