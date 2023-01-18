@@ -11,8 +11,6 @@ import {
 // Demo styles, see 'Styles' section below for some notes on use.
 import 'react-accessible-accordion/dist/fancy-example.css';
 
-
-
 import './Services.scss';
 
 export default function Services() {

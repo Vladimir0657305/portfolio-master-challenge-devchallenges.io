@@ -43,12 +43,18 @@
 .features-block {
     width: 100%;
     max-width: 1440px;
-    // height: auto;
+    height: auto;
+    // background-color: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
-.features-block__items {}
+.features-block__items {
+    margin: 30px;
+    &:last-child {
+        margin-bottom: 50px;
+    }
+}
 
 .parallax-effect-glare-scale {
     display: flex;
@@ -106,4 +112,24 @@
 .item4 {
     background-image: url('../images/cybersecurity.jpg') ;
     background-position: center;
+}
+@media (max-width: 720px) {
+    .features {
+        & h1 {
+            margin: 80px 0 20px;
+        }
+    }
+    .text {
+        flex-direction: column;
+        & span {
+            margin: 20px !important;
+            // &:first-child {
+            //         margin: -40px 20px 40px 40px;
+            //     }
+            
+            //     &:last-child {
+            //         margin: -40px 40px 40px 20px;
+            //     }
+        }
+    }
 }

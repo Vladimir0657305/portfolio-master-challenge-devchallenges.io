@@ -1,8 +1,6 @@
 import React from 'react';
-// import Tilt from 'index';
 import Tilt from 'react-parallax-tilt';
-// import './ParallaxEffectGlareScale.demozap.scss';
-// import './ParallaxEffectGlareScale.demozap.scss';
+
 
 import './Features.scss';
 
