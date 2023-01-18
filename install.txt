@@ -17,3 +17,8 @@ https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolli
 npm i -S react-scroll
 
 ==========
+
+npm install --save styled-components prop-types
+
+=========
+

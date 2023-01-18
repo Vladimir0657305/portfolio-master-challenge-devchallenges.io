@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import { Link } from "react-scroll";
 import * as Scroll from 'react-scroll';
+import { MenuContext } from './navState';
 import './Menu.scss';
 
 let scroll = Scroll.animateScroll;
+let windowWidth = window.innerWidth;
 
 const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
 
@@ -12,17 +14,17 @@ export default function Menu() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeLink, setActiveLink] = useState(false);
     const r = document.querySelectorAll('.menu a');
-    // console.log(r);
-    // for(let i = 0; i < r.length; i++) {
-    //     if (r[i].classList.value === 'activeLink') console.log('====>', i);
-    // }
-
-    // console.log(activeLink);
-    // r.classList.classSet("activeLink")
-    // if(r.classList.contains('activeLink')) console.log('====>');
-    // var elementClasses = r.classList;
-    // console.log(r.childNodes.length);
-    // r.classList.add('activeLink')
+    const {isMenuOpen, toggleMenu} = useContext(MenuContext);
+    console.log(window.innerWidth);
+    console.log(isMenuOpen, windowWidth < 767);
+    if(windowWidth < 767) toggleMenu(false);
+    console.log(isMenuOpen);
+    
+    
+    useEffect(() => { 
+        windowWidth < 767 && toggleMenu(false);
+        console.log(isMenuOpen);
+    }, [windowWidth < 767])
 
     const scrollToTop = () => {
         scroll.scrollToTop();
@@ -60,6 +62,10 @@ export default function Menu() {
     return (
         <>
             <header>
+{
+                    isMenuOpen &&
+
+
                 <div className='menuContainer'>
                     <div className='header'>
                         <div className='menu-logo' onClick={scrollToTop}>
@@ -100,6 +106,7 @@ export default function Menu() {
                         </AnimateSharedLayout>
                     </div>
                 </div>
+}
             </header>
 
         </>

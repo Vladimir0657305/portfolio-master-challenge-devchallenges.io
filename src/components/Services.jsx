@@ -20,6 +20,7 @@ export default function Services() {
         <>
             <section className='services'>
                 <Parallax bgImage={'../images/bg1.jpg'} strength={500}>
+                {/* <Parallax bgImage={'../images/bg1.webp'} strength={500}> */}
                     <div style={{ height: 140 }}>
                         
                     </div>

@@ -8,6 +8,8 @@ import Services from './components/Services';
 import SiteHead from './components/SiteHead';
 import Scroll from 'react-scroll';
 import Contacts from './components/Contacts';
+import NavState from './components/navState';
+import HamburgerMenu from './components/HamburgerMenu';
 var Element = Scroll.Element;
 
 function App() {
@@ -42,7 +44,9 @@ function App() {
             <Footer  />
           </Element>
           
-
+          <NavState>
+            <HamburgerMenu/>
+          </NavState>
         </div>
       </main>
     </>
