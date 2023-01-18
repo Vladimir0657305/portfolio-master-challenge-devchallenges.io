@@ -45,11 +45,11 @@ const Navigation = () => {
 
     return (
         <HamburgerMenu
-            className="hamburger-menu__item"
+            // className="hamburger-menu__item"
             right
             // noOverlay
             width={'100%'}
-            itemListElement="div"
+            // itemListElement="div"
             customBurgerIcon={false}
             isOpen={ctx.isMenuOpen}
             onStateChange={(state) => ctx.stateChangeHandler(state)}
@@ -67,6 +67,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                onClick={ctx.toggleMenu}
                 // onSetActive={() => setActiveLink(true)}
             >
                 <span className='hamburger-span'>Home</span>
@@ -79,6 +80,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                onClick={ctx.toggleMenu}
                 // onSetActive={() => setActiveLink(true)}
             >
                 <span>Features</span>
@@ -91,6 +93,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                onClick={ctx.toggleMenu}
                 // onSetActive={() => setActiveLink(true)}
             >
                 <span>Services</span>
@@ -103,6 +106,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                onClick={ctx.toggleMenu}
                 // onSetActive={() => setActiveLink(true)}
             >
                 <span>Portfolio</span>
@@ -115,6 +119,7 @@ const Navigation = () => {
                 smooth={true}
                 offset={0}
                 duration={500}
+                onClick={ctx.toggleMenu}
                 // onSetActive={() => setActiveLink(true)}
             >
                 <span>Contscts</span>
