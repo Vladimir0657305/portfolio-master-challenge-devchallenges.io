@@ -10,4 +10,4 @@
 ![](https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Vladimir0657305&theme=solarized_dark)
 
 ![](https://komarev.com/ghpvc/?username=Vladimir0657305)
-[![](https://snyk.io/advisor/npm-package/hamburger-react/badge.svg)](https://github.com/Vladimir0657305/portfolio-master-challenge-devchallenges.io)
+
