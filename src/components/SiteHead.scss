@@ -5,16 +5,11 @@
 .swiperSlide {
     margin-top: 68px;
     width: 100%;
-        // height: 600px !important;
-        // height: calc(100vh - 70px);
-        position: relative;
+    position: relative;
     img {
-    width: 100%;
-    // height: 600px;
-    height: calc(100vh - 90px);
-    // object-fit: fill;
-    object-fit: cover !important;
-    // aspect-ratio: 4 / 4;
+        width: 100%;
+        height: calc(100vh - 90px);
+        object-fit: cover !important;
     }
 }
 .swiper-button-next {
@@ -33,8 +28,7 @@
     position: absolute;
     font-family: "KaushanScript-Regular";
     & span {
-        // font-size: 80px;
-        font-size: calc(40px + (80 - 20) * ((100vw - 380px) / (1240 - 380)));
+        font-size: calc(40px + (50 - 20) * ((100vw - 380px) / (1240 - 380)));
     }
 }
 .typingEffect.slide1 {

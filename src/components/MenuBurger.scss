@@ -1,52 +1,26 @@
-.HamburgerButton {
-    // position: fixed;
-    // width: 100%;
-    // margin-top: 0;
-    // background-color: #eee;
-    // z-index: 1200;
-    // color: #a90000;
-}
-.hamburger-menu__item {
-    z-index: 1300000;
-    // & span {
-    //     color: #fff;
-    //     padding: 20px !important;
-    //     margin-top: 40px;
-    //     z-index: 999999;
-    // }
-}
 .bm-item-list {
     width: 100%;
     z-index: 1300000;
     background-color: #000;
     & span {
-            color: #fff;
-            padding: 20px ;
-            // margin-top: 40px ;
-            // background-color: green;
+        color: #fff;
+        padding: 20px ;
         }
 }
-
 .bm-item {
     padding-top: 40px;
     font-size: 40px;
-    z-index: 1300000;
 }
 .bm-menu {
-    // margin-top: 50px;
     background-color: #eee;
-    z-index: 1300000;
 }
 .bm-cross-button  {
     height: 24px !important;
     width: 24px !important;
 }
 .bm-cross {
-    // width: 16px !important;
-    // height: 16px !important;
     right: 8px;
     background: #bdc3c7;
-    // z-index: 999999999999;
 }
 .bm-burger-button {
     position: fixed;
@@ -55,12 +29,4 @@
     left: 36px;
     top: 36px;
     color: #fff !important;
-    z-index: 999999;
-}
-.bm-burger-bars {
-    background: #373a47;
-    background: #fff !important;
-}
-.bm-burger-bars-hover {
-    background: #a90000;
 }

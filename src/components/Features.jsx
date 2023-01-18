@@ -1,22 +1,17 @@
 import React from 'react';
 import Tilt from 'react-parallax-tilt';
-
-
 import './Features.scss';
 
 export default function Features() {
     return (
         <>
             <section className='features'>
-                
-                
                 <div className='features-text'>
                     <h1>Information Technology</h1>
                     <div className='text'>
                         <span>21st century has come to be known as the era of Information Technology; it is the key driver of economic growth of not only a nation, but rather the whole world. The growth and progress of every sector of the country today depends on the level of Information Technology.</span>
                         <span>Furthermore, technology is not important only at the work place, but also in our everyday life; whether it is working with the microwave oven which is a cooking appliance or a super computer, an appliance is based on information technology, technology helps everywhere.</span>
                     </div>
-                    
                 </div>
                 <div className='features-section'>
                     <div className='features-block'>
@@ -82,9 +77,6 @@ export default function Features() {
                         </div>
                     </div>
                 </div>
-
-                {/* <p className='features-end'>.</p> */}
-                
             </section>
         </>
     );

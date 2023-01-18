@@ -1,12 +1,6 @@
-// @import '../ReactParallaxTilt.scss';
-
-
 .features {
     margin-top: 100px;
-    height: 100vh;
-    // font-family: "Noto Sans", sans-serif;
-    // font-family: "Poppins", sans-serif;
-    
+    height: 100vh;    
     & h1 {
         margin: 100px 0;
         font-family: "Playfair Display", sans-serif;
@@ -30,21 +24,19 @@
         padding: 10px;
         border: 2px solid red;
         border-radius: 20px;
-        &:first-child {
-            margin: -40px 20px 40px 40px;
-        }
-        &:last-child {
-            margin: -40px 40px 40px 20px;
+            &:first-child {
+                margin: -40px 20px 40px 40px;
+            }
+            &:last-child {
+                margin: -40px 40px 40px 20px;
+            }
         }
     }
-    }
-    
 }
 .features-block {
     width: 100%;
     max-width: 1440px;
     height: auto;
-    // background-color: red;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -64,14 +56,11 @@
     width: 300px;
     height: 400px;
     color: white;
-    border: 5px solid black;
     border: 5px solid red;
     border-radius: 20px;
-
     transform-style: preserve-3d;
     &:after {
             width: calc(100% - 40px);
-            // border: 2px solid rgba(255, 255, 255, 0.5);
             border: 2px solid #fff;
             border-radius: 20px;
             height: calc(100% - 40px);
@@ -93,9 +82,6 @@
         color: white;
         transform: translateZ(60px);
     }
-}
-.features-end {
-    // margin-top: 200px;
 }
 .item1 {
     background-image: url('../images/blockchain.jpg') ;
@@ -123,13 +109,6 @@
         flex-direction: column;
         & span {
             margin: 20px !important;
-            // &:first-child {
-            //         margin: -40px 20px 40px 40px;
-            //     }
-            
-            //     &:last-child {
-            //         margin: -40px 40px 40px 20px;
-            //     }
         }
     }
 }

@@ -4,11 +4,6 @@ export default function Footer() {
     return (
         <footer>
             <div className="footer">
-
-
-                
-
-
                 Challenge by <a href="https://devchallenges.io/challenges/5ZnOYsSXM24JWnCsNFlt" target="_blank">Devchallenges.io</a>.
                 Coded by <a href="https://github.com/Vladimir0657305">V.Bakanov</a> with
                 <svg width="16" height="16" fill="red" className="bi bi-heart-fill " viewBox="0 0 16 16">

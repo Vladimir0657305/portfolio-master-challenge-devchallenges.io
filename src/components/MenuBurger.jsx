@@ -1,21 +1,15 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { stack as HamburgerMenu } from 'react-burger-menu';
 import './MenuBurger.scss';
 import Menu from './SiteMenu';
 import { Link } from "react-scroll";
 
 let windowWidth = window.innerWidth;
-console.log(windowWidth);
-// ======================================================================
-
-
-
 const MyContext = React.createContext();
 
 // create the provider
 const MyProvider = (props) => {
     const [menuOpenState, setMenuOpenState] = useState(false);
-
     return (
         <MyContext.Provider value={{
             isMenuOpen: menuOpenState,
@@ -45,21 +39,13 @@ const Navigation = () => {
 
     return (
         <HamburgerMenu
-            // className="hamburger-menu__item"
             right
-            // noOverlay
             width={'100%'}
-            // itemListElement="div"
             customBurgerIcon={false}
             isOpen={ctx.isMenuOpen}
             onStateChange={(state) => ctx.stateChangeHandler(state)}
         >
-            {/* <a className="menu-item" href="section0">Home</a>
-            <a className="menu-item" href="section1">Features</a>
-            <a className="menu-item" href="section2">Services</a>
-            <a className="menu-item" href="section3">Portfolio</a>
-            <a className="menu-item" href="section4">Contacts</a> */}
-            
+
             <Link
                 activeClass='activeLink'
                 to={`section0`}
@@ -68,7 +54,6 @@ const Navigation = () => {
                 offset={0}
                 duration={500}
                 onClick={ctx.toggleMenu}
-                // onSetActive={() => setActiveLink(true)}
             >
                 <span className='hamburger-span'>Home</span>
             </Link>
@@ -81,7 +66,6 @@ const Navigation = () => {
                 offset={0}
                 duration={500}
                 onClick={ctx.toggleMenu}
-                // onSetActive={() => setActiveLink(true)}
             >
                 <span>Features</span>
             </Link>
@@ -94,7 +78,6 @@ const Navigation = () => {
                 offset={0}
                 duration={500}
                 onClick={ctx.toggleMenu}
-                // onSetActive={() => setActiveLink(true)}
             >
                 <span>Services</span>
             </Link>
@@ -107,7 +90,6 @@ const Navigation = () => {
                 offset={0}
                 duration={500}
                 onClick={ctx.toggleMenu}
-                // onSetActive={() => setActiveLink(true)}
             >
                 <span>Portfolio</span>
             </Link>
@@ -120,40 +102,27 @@ const Navigation = () => {
                 offset={0}
                 duration={500}
                 onClick={ctx.toggleMenu}
-                // onSetActive={() => setActiveLink(true)}
             >
                 <span>Contscts</span>
             </Link>
-
         </HamburgerMenu>
     )
 }
 
-
-
 export default function MenuBurger() {
     return(
         <>
-        {/* windowWidth > 767 && */}
-            
             <MyProvider>
                 <div>
-                    
                     {
                         windowWidth > 767 && <Menu />
                     }
                     {
                         windowWidth < 767 && <HamburgerButton className='HamburgerButton' />
                     }
-                    {/* <Menu /> */}
                     <Navigation />
-                    {/* {
-                        windowWidth > 767 && <Menu />
-                    } */}
-                    
                 </div>
             </MyProvider>
-
         </>
     );
 }

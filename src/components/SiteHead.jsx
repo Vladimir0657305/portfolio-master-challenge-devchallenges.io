@@ -13,8 +13,7 @@ import { useState } from 'react';
 export default function SiteHead() {
     SwiperCore.use([Autoplay]);
     const [show, setShow] = useState(1);
-
-    const color =() => Math.floor(Math.random() * 250);
+    const color = () => Math.floor(Math.random() * 250);
 
     return (
         <>
@@ -31,10 +30,6 @@ export default function SiteHead() {
                     disableOnInteraction: false
                 }}
                 scrollbar={{ draggable: true }}
-                // onSwiper={(swiper) => console.log(swiper)}
-                // onSlideChange={() => console.log('slide change')}
-
-
                 onSlideChange={(swiperCore) => {
                     const { activeIndex } = swiperCore;
                     switch (activeIndex) {
@@ -86,8 +81,7 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        // style={i % 2 === 0 ? { color: '#f5bb00' } : { color: '#50627B' }}
-                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}`} }
+                                                        style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
                                             })}
@@ -120,7 +114,6 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        // style={i % 2 === 0 ? { color: '#442b15' } : { color: '#8ea604' }}
                                                         style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
@@ -153,7 +146,6 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        // style={i % 2 === 0 ? { color: '#fff' } : { color: '#dab7a3' }}
                                                         style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
@@ -186,7 +178,6 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        // style={i % 2 === 0 ? { color: '#c7b6b0' } : { color: '#f3fafa' }}
                                                         style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
@@ -219,7 +210,6 @@ export default function SiteHead() {
                                                 return (
                                                     <span
                                                         key={key}
-                                                        // style={i % 2 === 0 ? { color: '#a1fcdf' } : { color: '#fcd29f' }}
                                                         style={{ color: `rgb(${color()}, ${color()}, ${color()}` }}
                                                     >{char}</span>
                                                 );
