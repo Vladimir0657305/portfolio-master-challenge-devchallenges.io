@@ -83,17 +83,15 @@ export default function Services() {
                                     </AccordionItemButton>
                                 </AccordionItemHeading>
                                 <AccordionItemPanel>
-                                    
-                                        <p>
-                                            Network security services help protect a business' network from unauthorized access. IT services can create and issue access authorization to those who need it. They also provide many other services to protect your network, including:
-                                        </p>
+                                    <p>
+                                        Network security services help protect a business' network from unauthorized access. IT services can create and issue access authorization to those who need it. They also provide many other services to protect your network, including:
                                         <ul className='services-ul'>
                                             <li>Building firewalls</li>
                                             <li>Installing anti-virus software</li>
                                             <li>Installing virtual private networks (VPNs)</li>
                                             <li>Performing regular network checkups</li>
                                         </ul>
-                                    
+                                    </p>
                                 </AccordionItemPanel>
                             </AccordionItem>
                         </Accordion>

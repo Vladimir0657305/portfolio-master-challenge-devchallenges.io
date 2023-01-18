@@ -2,30 +2,24 @@ import React, { useContext, useEffect, useState } from 'react';
 import { motion, AnimateSharedLayout } from 'framer-motion';
 import { Link } from "react-scroll";
 import * as Scroll from 'react-scroll';
-import { MenuContext } from './navState';
-import './Menu.scss';
+import './SiteMenu.scss';
 
 let scroll = Scroll.animateScroll;
-let windowWidth = window.innerWidth;
 
 const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
+
+
 
 export default function Menu() {
     const [activeIndex, setActiveIndex] = useState(0);
     const [activeLink, setActiveLink] = useState(false);
     const r = document.querySelectorAll('.menu a');
-    const {isMenuOpen, toggleMenu} = useContext(MenuContext);
-    console.log(window.innerWidth);
-    console.log(isMenuOpen, windowWidth < 767);
-    if(windowWidth < 767) toggleMenu(false);
-    console.log(isMenuOpen);
-    
-    
-    useEffect(() => { 
-        windowWidth < 767 && toggleMenu(false);
-        console.log(isMenuOpen);
-    }, [windowWidth < 767])
-
+    // console.log(r);
+    // const {isMenuOpen, toggleMenu} = useContext(MenuContext);
+    // console.log(window.innerWidth);
+    // console.log(isMenuOpen, windowWidth < 767);
+    // if(windowWidth < 767) toggleMenu(false);
+    // console.log(activeIndex);
     const scrollToTop = () => {
         scroll.scrollToTop();
     };
@@ -39,6 +33,11 @@ export default function Menu() {
 
     useEffect(() => { 
         // r.map((item, i) => item.classList.value == 'activeLink' ? console.log('!=!=!=',i) : null)
+        
+        // for (let i = 0; i < r.length; i++) {
+        //     if (r[i].classList.value === 'activeLink') console.log('!=!=!=', i)
+        // }
+
         let timer1 = 0;
         
         for (let i = 0; i < r.length; i++) {
@@ -59,24 +58,22 @@ export default function Menu() {
         
     }, [activeLink])
 
+
     return (
         <>
             <header>
-{
-                    isMenuOpen &&
-
-
                 <div className='menuContainer'>
                     <div className='header'>
                         <div className='menu-logo' onClick={scrollToTop}>
                             <img src="../images/logo-coffee.jpg" alt="" />
                         </div>
-
                         <AnimateSharedLayout>
                             <div className='menu'>
+
                                 {
                                     menuData.map((item, index) => (
                                         <Link
+                                            key={index}
                                             // activeClass="activeLink"
                                             // activeClass={() => setActiveIndex(index)}
                                             activeClass='activeLink'
@@ -90,25 +87,34 @@ export default function Menu() {
                                             onSetActive={() => setActiveLink(true)}
                                         >
                                         
-                                        <MenuItem
+                                        {/* <MenuItem
                                             key={item}
                                             item={item}
                                             isSelected={activeIndex === index}
-                                            // handleClick={() => setActiveIndex(index)}
                                                 handleClick={() => handleClick(index)}
-                                        />
+                                        /> */}
+                                            <motion.div className='menuItem' onClick={handleClick} initial={{ color: '#000' }} animate={{ color: activeIndex === index ? 'rgb(255, 0, 0)' : '#000' }}>
+                                                {
+                                                    activeIndex === index && 
+                                                    <motion.div
+                                                        className='activeItem'
+                                                        layoutId="activeItem"
+                                                    />
+                                                }
+                                                <span>{item}</span>
+                                            </motion.div>
+
+
+
 
                                         </Link>
-
                                     ))
                                 }
                             </div>
                         </AnimateSharedLayout>
                     </div>
                 </div>
-}
             </header>
-
         </>
     );
 }

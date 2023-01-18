@@ -1,0 +1,66 @@
+@font-face {
+    font-family: "KaushanScript-Regular";
+    src: url("../fonts/KaushanScript-Regular.otf") format("opentype");
+}
+.swiperSlide {
+    margin-top: 68px;
+    width: 100%;
+        // height: 600px !important;
+        // height: calc(100vh - 70px);
+        position: relative;
+    img {
+    width: 100%;
+    // height: 600px;
+    height: calc(100vh - 90px);
+    object-fit: fill;
+    object-fit: cover;
+    // aspect-ratio: 4 / 4;
+    }
+}
+.swiper-button-next {
+    margin-right: 30px;
+}
+.swiper-pagination-bullet {
+    background-color: red;
+    width: 20px;
+    height: 20px;
+}
+.swiper-pagination-bullet-active {
+    background-color: red;
+}
+.typingEffect {
+    position: absolute;
+    font-family: "KaushanScript-Regular";
+    & span {
+        font-size: 80px;
+    }
+}
+.typingEffect.slide1 {
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide2 {
+    width: 100vw;
+    top: 20%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+}
+.slide3 {
+    width: 100vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide4 {
+    width: 100vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.slide5 {
+    width: 100vw;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

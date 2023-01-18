@@ -54,16 +54,3 @@
     }
     
 }
-
-@media (max-width: 767px) {
-    .portfolio-block{
-        position: static;
-        display: flex;
-        flex-direction: column;
-        height: auto;
-    }
-    .portfolio-block__item {
-        position: static;
-        background-color: red;
-    }
-}
