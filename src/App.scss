@@ -46,42 +46,8 @@
 .siteHead {
   width: 100%;
 }
-// Preloader ===========================
-// .animationLoader {
-//   position: fixed;
-//   left: 0;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   overflow: hidden;
-//   background: #e0e0e0;
-//   z-index: 1001;
-// }
-// .animationLoader__image {
-//   position: relative;
-//   top: 50%;
-//   left: 50%;
-//   width: 80px;
-//   height: 80px;
-//   margin-top: -45px;
-//   margin-left: -45px;
-//   text-align: center;
-//   animation: animationLoader-rotate 2s infinite linear;
-// }
+// Preloader ===============================================================
 
-// @keyframes animationLoader-rotate {
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
-// .animation_hiding .animationLoader {
-//   transition: 0.3s opacity;
-//   opacity: 0;
-// }
-// .animation .animationLoader {
-//   display: none;
-// }
-// =======================================================================
 div.preloader {
   position: absolute;
   top: 50%;
