@@ -6,7 +6,7 @@ import './SiteMenu.scss';
 
 let scroll = Scroll.animateScroll;
 
-const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
+export const menuData = ['Home', 'Features', 'Services', 'Portfolio', 'Contacts']
 
 export default function Menu() {
     const [activeIndex, setActiveIndex] = useState(0);

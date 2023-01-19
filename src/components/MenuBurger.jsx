@@ -3,6 +3,7 @@ import { stack as HamburgerMenu } from 'react-burger-menu';
 import './MenuBurger.scss';
 import Menu from './SiteMenu';
 import { Link } from "react-scroll";
+import { menuData } from './SiteMenu';
 
 let windowWidth = window.innerWidth;
 const MyContext = React.createContext();
@@ -45,72 +46,28 @@ const Navigation = () => {
             isOpen={ctx.isMenuOpen}
             onStateChange={(state) => ctx.stateChangeHandler(state)}
         >
-
-            <Link
-                activeClass='activeLink'
-                to={`section0`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={ctx.toggleMenu}
-            >
-                <span className='hamburger-span'>Home</span>
-            </Link>
-
-            <Link
-                activeClass='activeLink'
-                to={`section1`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={ctx.toggleMenu}
-            >
-                <span>Features</span>
-            </Link>
-
-            <Link
-                activeClass='activeLink'
-                to={`section2`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={ctx.toggleMenu}
-            >
-                <span>Services</span>
-            </Link>
-
-            <Link
-                activeClass='activeLink'
-                to={`section3`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={ctx.toggleMenu}
-            >
-                <span>Portfolio</span>
-            </Link>
-
-            <Link
-                activeClass='activeLink'
-                to={`section4`}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
-                onClick={ctx.toggleMenu}
-            >
-                <span>Contscts</span>
-            </Link>
+            {
+                [...Array(5)].map((_, i) =>
+                    <Link
+                        key={i}
+                        activeClass='activeLink'
+                        to={`section${i}`}
+                        spy={true}
+                        smooth={true}
+                        offset={0}
+                        duration={500}
+                        onClick={ctx.toggleMenu}
+                    >
+                        <span className='hamburger-span'>{menuData[i]}</span>
+                    </Link>
+                )
+            }
         </HamburgerMenu>
     )
 }
 
 export default function MenuBurger() {
-    return(
+    return (
         <>
             <MyProvider>
                 <div>
