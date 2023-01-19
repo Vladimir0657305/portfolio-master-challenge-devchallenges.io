@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import Portfolio from './components/Portfolio';
@@ -15,20 +15,21 @@ function App() {
 
   return (
     <>
-      <div class='preloader'>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-        <div class='dot'></div>
-      </div>
+
+      {/* <div className='preloader' >
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+        <div className='dot'></div>
+      </div> */}
 
       <main className='container'>
         <div className="App">

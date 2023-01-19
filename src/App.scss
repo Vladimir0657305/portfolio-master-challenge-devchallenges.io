@@ -46,15 +46,40 @@
 .siteHead {
   width: 100%;
 }
-// Preloader ===============================================================
 
+// Preloader ===============================================================
 div.preloader {
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: #ccc;
-  z-index: 999999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+    
+}
+div.preloader.hide-preloader {
+  animation: hidePreloader 1s;
+}
+
+div.preloader.preloader-hidden {
+  display: none;
+}
+
+@keyframes hidePreloader {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
 }
 
 div.preloader div.dot {
@@ -63,7 +88,7 @@ div.preloader div.dot {
   margin: 15px;
   display: inline-block;
   border-radius: 50%;
-  z-index: 99999999;
+  
 }
 
 div.preloader div.dot:nth-child(1) {
