@@ -1,0 +1,32 @@
+.bm-item-list {
+    width: 100%;
+    z-index: 1300000;
+    background-color: #000;
+    & span {
+        color: #fff;
+        padding: 20px ;
+        }
+}
+.bm-item {
+    padding-top: 40px;
+    font-size: 40px;
+}
+.bm-menu {
+    background-color: #eee;
+}
+.bm-cross-button  {
+    height: 24px !important;
+    width: 24px !important;
+}
+.bm-cross {
+    right: 8px;
+    background: #bdc3c7;
+}
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 36px;
+    left: 36px;
+    top: 36px;
+    color: #fff !important;
+}
