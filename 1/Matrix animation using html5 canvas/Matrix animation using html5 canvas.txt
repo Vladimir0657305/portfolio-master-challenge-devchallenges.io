@@ -1,3 +1,0 @@
-Matrix animation using html5 canvas
-
-https://codepen.io/cpiscopo/pen/JjEwaW
